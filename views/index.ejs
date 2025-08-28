@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="w-full min-h-screen bg-zinc-900 text-white p-10">
+        <h3 class="text-3xl">Create Account</h3>
+      <% if (message) { %>
+        <div class="mt-4 mb-6 rounded-md bg-green-600/20 border border-green-600 text-green-300 px-4 py-3">
+          <%= message %>
+        </div>
+      <% } %>
+      <% if (error) { %>
+        <div class="mt-4 mb-6 rounded-md bg-red-600/20 border border-red-600 text-red-300 px-4 py-3">
+          <%= error %>
+        </div>
+      <% } %>
+      <form action="/register"method="post">
+        <input class="px-3 py-2 rounded-md outliner-none bg-transparent border-2 border-zinc-800" type="text" placeholder="name" name="name">
+        <input class="px-3 py-2 rounded-md outliner-none bg-transparent border-2 border-zinc-800" type="text" placeholder="username" name="username">
+        <input class="px-3 py-2 rounded-md outliner-none bg-transparent border-2 border-zinc-800" type="number" placeholder="age" name="age">
+        <input class="px-3 py-2 rounded-md outliner-none bg-transparent border-2 border-zinc-800" type="email" placeholder="email" name="email">
+        <input class="px-3 py-2 rounded-md outliner-none bg-transparent border-2 border-zinc-800" type="password" placeholder="password" name="password">
+       <button class="px-3 py-2 rounded-md outliner-none bg-blue-500" type="submit">Create Account</button>
+      </form>
+
+    </div>
+
+    
+</body>
+</html>
